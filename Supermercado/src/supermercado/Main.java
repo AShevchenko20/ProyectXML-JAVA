@@ -6,7 +6,7 @@ Scanner entrada = new Scanner(System.in);
 int num;
 do{
 do{
-System.out.println("============Pantalla principal==========");
+System.out.println("=============Pantalla Principal=============");
 System.out.println("(1)-Stock");
 System.out.println("(2)-Vendes");
 System.out.println("(3)-Sortir");
@@ -26,7 +26,7 @@ String[][] stock = {{"1","Pan","2€"},{"2","Patatas","1€"},{"3","Sprite","1.2€"},
 int num;
 do{
 do{
-System.out.println("=============Stock================");
+System.out.println("===================Stock====================");
 System.out.println("(1)-Afegir Productes");
 System.out.println("(2)-Consultar");
 System.out.println("(3)-Sortir");
@@ -34,35 +34,36 @@ System.out.print("Introduce el numero: ");
 num = entrada.nextInt();
 }
 while(num<1 || num>3);
-if(num==1){GuardaEnStock(stock,Afegir(stock));}
+if(num==1){GuardaEnStock(Afegir(stock),stock);}
 if(num==2){Consultar(stock);}
 if(num==3){return;}
 }
 while(num!=3);
 }
-public static void Vendes(){
-Scanner entrada = new Scanner(System.in);
-}
 public static String[] Afegir(String[][] stock){
 Scanner entrada = new Scanner(System.in);
 String[] array = new String[3];
+System.out.println("============Afeigent el Producte============");    
 array[0]=""+(stock.length+1);
-System.out.println("El id sera: "+(stock.length+1));
-System.out.print("Introduce el Nombre del producte: ");
+System.out.println("Es el "+(stock.length+1)+" producto");
+System.out.print("Introduce el Nombre del producto: ");
 array[1]=entrada.next();
-System.out.print("Introduce el Precio del producte: ");
+System.out.print("Introduce el Precio del producto: ");
 array[2]=entrada.next();
 return array;
 }
 public static void Consultar(String[][] array){
 System.out.println("");
-System.out.println("=============Listado de productos===========");
+System.out.println("============Listado de Productos============");
 for(int i=0;i<array.length;i++){
 for(int n=0;n<array[i].length;n++){
 System.out.printf("%-18s",array[i][n]);
 }System.out.println("");
 }
 }
-public static void GuardaEnStock(String[][] stock, String[] array){
+public static void GuardaEnStock(String[] array, String[][] stock){
+}
+public static void Vendes(){
+Scanner entrada = new Scanner(System.in);
 }
 }
