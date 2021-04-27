@@ -34,7 +34,7 @@ System.out.print("Introduce el numero: ");
 num = entrada.nextInt();
 }
 while(num<1 || num>3);
-if(num==1){GuardaEnStock(Afegir(stock),stock);}
+if(num==1){String[] array=Afegir(stock);GuardaEnStock(array,stock);}
 if(num==2){Consultar(stock);}
 if(num==3){return;}
 }
