@@ -45,7 +45,7 @@ Scanner entrada = new Scanner(System.in);
 String[] array = new String[3];
 System.out.println("============Afeigent el Producte============");    
 array[0]=""+(stock.length+1);
-System.out.println("Es el "+(stock.length+1)+" producto");
+System.out.println("El (ID) será: "+(stock.length+1));
 System.out.println("Introduce el Nombre del producto: ");
 System.out.print(">");
 array[1]=entrada.next();
