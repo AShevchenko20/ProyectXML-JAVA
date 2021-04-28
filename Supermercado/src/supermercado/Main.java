@@ -35,7 +35,7 @@ num = entrada.nextInt();
 }
 while(num<1 || num>3);
 if(num==1){String[] array=Afegir(stock);GuardaEnStock(array,stock);}
-if(num==2){Consultar(stock);}
+if(num==2){ConsultarStock(stock);}
 if(num==3){return;}
 }
 while(num!=3);
@@ -52,14 +52,16 @@ System.out.print("Introduce el Precio del producto: ");
 array[2]=entrada.next();
 return array;
 }
-public static void Consultar(String[][] array){
+public static void ConsultarStock(String[][] array){
 System.out.println("");
 System.out.println("============Listado de Productos============");
+System.out.println("(ID)            (Nombre)          (Precio)");
 for(int i=0;i<array.length;i++){
 for(int n=0;n<array[i].length;n++){
-System.out.printf("%-18s",array[i][n]);
+System.out.printf("%-17s",array[i][n]);
 }System.out.println("");
 }
+System.out.println("");
 }
 public static void GuardaEnStock(String[] array, String[][] stock){
 }
