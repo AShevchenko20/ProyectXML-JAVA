@@ -10,7 +10,7 @@ System.out.println("=============Pantalla Principal=============");
 System.out.println("(1)-Stock");
 System.out.println("(2)-Vendes");
 System.out.println("(3)-Sortir");
-System.out.print("Elige una opcion: ");
+System.out.print(">: ");
 num = entrada.nextInt();
 }
 while(num<1 || num>3);
@@ -22,7 +22,7 @@ while(num!=3);
 }
 public static void Stock(){
 Scanner entrada = new Scanner(System.in);
-String[][] stock = {{"1","Pan","2€"},{"2","Patatas","1€"},{"3","Sprite","1.2€"},{"4","Pescado","3€"},{"5","Almendras","1€"},{"6","Cola","1€"},{"7","Lipton","1.05€"},{"8","Jamon","50€"},{"9","Hamburgesa","2€"}};
+String[][] stock = {{"(ID)","(Nombre)","(Precio)"},{"1","Pan","2€"},{"2","Patatas","1€"},{"3","Sprite","1.2€"},{"4","Pescado","3€"},{"5","Almendras","1€"},{"6","Cola","1€"},{"7","Lipton","1.05€"},{"8","Jamon","50€"},{"9","Hamburgesa","2€"}};
 int num;
 do{
 do{
@@ -30,7 +30,7 @@ System.out.println("===================Stock====================");
 System.out.println("(1)-Afegir Productes");
 System.out.println("(2)-Consultar");
 System.out.println("(3)-Sortir");
-System.out.print("Elige una opcion: ");
+System.out.print(">: ");
 num = entrada.nextInt();
 }
 while(num<1 || num>3);
@@ -44,8 +44,8 @@ public static String[] Afegir(String[][] stock){
 Scanner entrada = new Scanner(System.in);
 String[] array = new String[3];
 System.out.println("============Afeigent el Producte============");    
-array[0]=""+(stock.length+1);
-System.out.println("El (ID) será: "+(stock.length+1));
+array[0]=""+(stock.length);
+System.out.println("El (ID) será: "+(stock.length));
 System.out.println("Introduce el Nombre del producto: ");
 System.out.print(">");
 array[1]=entrada.next();
@@ -57,13 +57,11 @@ return array;
 public static void ConsultarStock(String[][] array){
 System.out.println("");
 System.out.println("============Listado de Productos============");
-System.out.println("(ID)            (Nombre)          (Precio)");
 for(int i=0;i<array.length;i++){
 for(int n=0;n<array[i].length;n++){
 System.out.printf("%-17s",array[i][n]);
 }System.out.println("");
 }
-System.out.println("");
 }
 public static void GuardaEnStock(String[] array, String[][] stock){
 }
