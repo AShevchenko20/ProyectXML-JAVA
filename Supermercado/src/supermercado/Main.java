@@ -10,7 +10,7 @@ System.out.println("=============Pantalla Principal=============");
 System.out.println("(1)-Stock");
 System.out.println("(2)-Vendes");
 System.out.println("(3)-Sortir");
-System.out.print("Introduce el numero: ");
+System.out.print("Elige una opcion: ");
 num = entrada.nextInt();
 }
 while(num<1 || num>3);
@@ -30,7 +30,7 @@ System.out.println("===================Stock====================");
 System.out.println("(1)-Afegir Productes");
 System.out.println("(2)-Consultar");
 System.out.println("(3)-Sortir");
-System.out.print("Introduce el numero: ");
+System.out.print("Elige una opcion: ");
 num = entrada.nextInt();
 }
 while(num<1 || num>3);
@@ -46,9 +46,11 @@ String[] array = new String[3];
 System.out.println("============Afeigent el Producte============");    
 array[0]=""+(stock.length+1);
 System.out.println("Es el "+(stock.length+1)+" producto");
-System.out.print("Introduce el Nombre del producto: ");
+System.out.println("Introduce el Nombre del producto: ");
+System.out.print(">");
 array[1]=entrada.next();
-System.out.print("Introduce el Precio del producto: ");
+System.out.println("Introduce el Precio del producto: ");
+System.out.print(">");
 array[2]=entrada.next();
 return array;
 }
@@ -67,5 +69,8 @@ public static void GuardaEnStock(String[] array, String[][] stock){
 }
 public static void Vendes(){
 Scanner entrada = new Scanner(System.in);
+System.out.println("===================Vendes===================");
+System.out.print(">");
+System.out.println("");
 }
 }
